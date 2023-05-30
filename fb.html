@@ -42,16 +42,28 @@
 
             function login(user,pass){
                 if(user==database[0].username&&pass==database[0].password){
-                    document.write("<h1>");
-                    document.write(status[0].name);
-                    document.write(":</h1>");
-                    document.write(status[0].status);
+                    var a=0;
+                    while(a<=status.length-1){
+                        document.write("<h1>");
+                        document.write(status[a].name);
+                        document.write(":</h1>");
+                        document.write(status[a].status);
+                        a++;
+                    }
+                    
 
-                    document.write("<br>");
-                    document.write("<h1>");
-                    document.write(status[1].name);
-                    document.write(":</h1>");
-                    document.write(status[1].status);
+                    // document.write("<h1>");
+                    // document.write(status[0].name);
+                    // document.write(":</h1>");
+                    // document.write(status[0].status);
+
+                    // document.write("<br>");
+                    // document.write("<h1>");
+                    // document.write(status[1].name);
+                    // document.write(":</h1>");
+                    // document.write(status[1].status);
+                }else{
+                    alert("Incorrect Username or Password");
                 }
             }
             login(username,password);
